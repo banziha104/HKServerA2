@@ -4,5 +4,5 @@ from HKDataBase import views
 from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
-    url(r'^$',views.hkdata_list),
+    url(r'^$',views.HKDataList.as_view()),
 ]

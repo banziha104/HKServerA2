@@ -1,6 +1,7 @@
 from django.db import models
 from section.models import Section
 from contentType.models import ContentType
+from django.contrib.auth.models import User
 # Create your models here.
 
 class HKData(models.Model):
@@ -13,6 +14,7 @@ class HKData(models.Model):
     image = models.ImageField(upload_to='HKmodel/%Y/&m/%d', default='NoImage.jpg')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    writer = models.ForeignKey(User,related_name='writer_name',null=True)
 
     class Meta:
         pass
