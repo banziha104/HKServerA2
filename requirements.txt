@@ -1,4 +1,0 @@
-django==1.11.0
-Pillow==4.3.0
-djangorestframework==3.7.3
-pytz==2017.2
