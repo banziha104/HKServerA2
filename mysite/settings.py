@@ -126,7 +126,9 @@ USE_TZ = True
 
 # arn:aws:iam::635345261195:user/S3Storage
 
-
+STATICFILES_DIRS = [
+                os.path.join(BASE_DIR,'static')
+]
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
     'PAGINATE_BY': 600,
