@@ -130,9 +130,15 @@ STATICFILES_DIRS = [
                 os.path.join(BASE_DIR,'static')
 ]
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+            'rest_framework.authentication.BasicAuthentication',  # enables simple command line authentication
+            'rest_framework.authentication.SessionAuthentication',
+            'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
     'PAGINATE_BY': 600,
-    'DEFAULT_PAGINATION_CLASS': 'HKDataBase.pagination.DataPagination'
+    'DEFAULT_PAGINATION_CLASS': 'HKDataBase.pagination.DataPagination',
+
 }
 
 
