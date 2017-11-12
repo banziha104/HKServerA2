@@ -132,3 +132,24 @@ REST_FRAMEWORK = {
     'PAGINATE_BY': 600,
     'DEFAULT_PAGINATION_CLASS': 'HKDataBase.pagination.DataPagination'
 }
+
+
+
+# AWS_ACCESS_KEY_ID = 'AKIAI6V4JAJ2JADKTZKA'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_REGION = 'ap-northeast-2'
+# AWS_STORAGE_BUCKET_NAME = 'ishkstorage'
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME,AWS_REGION)
+# AWS_S3_OBJECT_PARAMETERS = {
+#     'CacheControl':'max-age=86400',
+# }
+# AWS_LOCATION = 'static'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
+# STATIC_URL = 'https://%s/%s/'%(AWS_S3_CUSTOM_DOMAIN,AWS_LOCATION)
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN,AWS_MEDIA_LOCATION)
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+# DEFAULT_FILE_STORAGE = 'mysite.storage.MediaRootS3BotoStorage'
