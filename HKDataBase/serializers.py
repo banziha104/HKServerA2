@@ -5,7 +5,7 @@ from HKDataBase.models import HKData
 class HKDataSerializer(serializers.ModelSerializer):
     class Meta :
         model = HKData
-        fields = ('title','description','type','section','lat','lon','image','created','updated')
+        fields = ('title','description','type','section','lat','lon','image','created','updated','writer','hit')
 
 
     def create(self, validated_data):
