@@ -14,9 +14,14 @@ class HKDataList(generics.ListAPIView):
     serializer_class = HKDataSerializer
     pagination_class = DataPagination
 
-@api_view(['GET','POST'])
+@api_view(['GET'])
 def hkdata_list(request,format = None):
     if(request.method == 'GET') :
         datalist = HKData.objects.all()
         serializer = HKDataSerializer(datalist,many = True,context={'request':request})
         return Response(DataPagination(serializer.data))
+
+@api_view(['POST'])
+def like(request):
+    if request.method == 'POST':
+        id = request.POST.get()

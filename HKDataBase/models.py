@@ -14,8 +14,8 @@ class HKData(models.Model):
     image = models.ImageField(upload_to='HKmodel/%Y/&m/%d', default='NoImage.jpg')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    writer = models.ForeignKey(User,editable=False)
-    hit = models.IntegerField(default=0)
+    writer = models.ForeignKey(User,editable=False,default=1)
+    hit = models.FloatField(default=0.0)
 
     class Meta:
         pass
